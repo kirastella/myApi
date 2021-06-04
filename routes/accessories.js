@@ -74,7 +74,7 @@ router.patch("/accessories/:accessoriesId", auth, async function(request, respon
     response.json(accessories)
 })
  
-router.delete("/accessoriess/:accessoriesId", auth, async function(request, response, next){
+router.delete("/accessories/:accessoriesId", auth, async function(request, response, next){
     try {
         await Accessories.findByIdAndDelete(request.params.accessoriesId)
 
