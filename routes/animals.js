@@ -122,10 +122,10 @@ router.patch("/animals/:animalId", auth, async function(request, response, next)
 
     if(type) updateObject.type = type;
     if(breed) updateObject.breed = breed;
-    if(name) updateObejct.name = name;
-    if(age) updateObejct.age = age;
-    if(sex) updateObejct.sex = sex;
-    if(colors) updateObejct.colors = colors;
+    if(name) updateObject.name = name;
+    if(age) updateObject.age = age;
+    if(sex) updateObject.sex = sex;
+    if(colors) updateObject.colors = colors;
 
     let animal = await Animal.findByIdAndUpdate(request.params.animalId, updateObject, {new:true})
     //let animal = Animal.findById()
